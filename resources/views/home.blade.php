@@ -1,23 +1,21 @@
 @extends('layouts.template-app')
 
-@section('page_heading', "Home")
-
 @section('content')
-<div class="row">
-    <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-warning shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-md font-weight-bold text-warning text-uppercase mb-1">
-                            Halo, {{ Auth::user()->name }} <br>
-                            {{ Auth::user()->nbi }}
-                        </div>
-                        {{-- <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div> --}}
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-profile fa-2x text-gray-300"></i>
-                    </div>
+<div class="container-fluid">
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor">Dashboard</h3>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)"></a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    Hai, {{ Auth::user()->name }} - {{ Auth::user()->nbi }}
                 </div>
             </div>
         </div>

@@ -3,33 +3,49 @@
 @section('page_heading', "Ujian")
 
 @section('content')
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-warning">Data Ujian</h6>
+
+<div class="container-fluid">
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor">Ujian</h3>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Ujian</a></li>
+            </ol>
+        </div>
     </div>
-    <div class="card-body">
-        <table class="table table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Mata Kuliah</th>
-                    <th scope="col">Dosen</th>
-                    <th scope="col">Tanggal</th>
-                    <th scope="col">Jam</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($data as $item)
-                <tr>
-                    <th scope="row">{{ $loop->iteration }}</th>
-                    <td>{{ $item->mata_kuliah_relation->name }}</td>
-                    <td>{{ $item->mata_kuliah_relation->dosen }}</td>
-                    <td>{{ $item->date }}</td>
-                    <td>{{ $item->time }}</td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+    <div class="row">
+        <!-- column -->
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Ujian</h4>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Mata Kuliah</th>
+                                    <th>Dosen</th>
+                                    <th>Tanggal</th>
+                                    <th>Jam</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($data as $item)
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{ $item->mata_kuliah_relation->name }}</td>
+                                        <td>{{ $item->mata_kuliah_relation->dosen }}</td>
+                                        <td>{{ $item->date }}</td>
+                                        <td>{{ $item->time }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
