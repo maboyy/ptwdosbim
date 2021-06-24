@@ -5,11 +5,11 @@
 @section('content')
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Ujian</h6>
+        <h6 class="m-0 font-weight-bold text-warning">Data Ujian</h6>
     </div>
     <div class="card-body">
-        <table class="table table-striped">
-            <thead>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Mata Kuliah</th>
